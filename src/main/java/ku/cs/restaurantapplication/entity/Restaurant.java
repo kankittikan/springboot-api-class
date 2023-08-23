@@ -1,2 +1,20 @@
-package ku.cs.restaurantapplication.entity;public class Restaurant {
+package ku.cs.restaurantapplication.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+import java.util.UUID;
+
+@Data
+@Entity
+public class Restaurant {
+    @Id
+    @GeneratedValue
+    private UUID id;
+
+    private String name;
+    private Double rating;
+    private String location;
 }
